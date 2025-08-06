@@ -16,3 +16,13 @@ function eqtheme_elementor_support() {
     ]);
 }
 add_action('after_setup_theme', 'eqtheme_elementor_support');
+
+function eqtheme_register_menus() {
+    register_nav_menus(
+        array(
+            'primary' => __('Primary Menu', 'eqtheme'),
+            'footer' => __('Footer Menu', 'eqtheme')
+        )
+    );
+}
+add_action('after_setup_theme', 'eqtheme_register_menus');
